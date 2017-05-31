@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.7)
+project(testC)
+
+set(CMAKE_CXX_STANDARD 11)
+
+set(SOURCE_FILES c.c)
+add_executable(testC ${SOURCE_FILES})
