@@ -57,38 +57,38 @@ include CMakeFiles/testC.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/testC.dir/flags.make
 
-CMakeFiles/testC.dir/c.c.o: CMakeFiles/testC.dir/flags.make
-CMakeFiles/testC.dir/c.c.o: ../c.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuongnb/CLionProjects/testC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/testC.dir/c.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testC.dir/c.c.o   -c /home/cuongnb/CLionProjects/testC/c.c
+CMakeFiles/testC.dir/main.c.o: CMakeFiles/testC.dir/flags.make
+CMakeFiles/testC.dir/main.c.o: ../main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cuongnb/CLionProjects/testC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/testC.dir/main.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testC.dir/main.c.o   -c /home/cuongnb/CLionProjects/testC/main.c
 
-CMakeFiles/testC.dir/c.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testC.dir/c.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cuongnb/CLionProjects/testC/c.c > CMakeFiles/testC.dir/c.c.i
+CMakeFiles/testC.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testC.dir/main.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cuongnb/CLionProjects/testC/main.c > CMakeFiles/testC.dir/main.c.i
 
-CMakeFiles/testC.dir/c.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testC.dir/c.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cuongnb/CLionProjects/testC/c.c -o CMakeFiles/testC.dir/c.c.s
+CMakeFiles/testC.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testC.dir/main.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cuongnb/CLionProjects/testC/main.c -o CMakeFiles/testC.dir/main.c.s
 
-CMakeFiles/testC.dir/c.c.o.requires:
+CMakeFiles/testC.dir/main.c.o.requires:
 
-.PHONY : CMakeFiles/testC.dir/c.c.o.requires
+.PHONY : CMakeFiles/testC.dir/main.c.o.requires
 
-CMakeFiles/testC.dir/c.c.o.provides: CMakeFiles/testC.dir/c.c.o.requires
-	$(MAKE) -f CMakeFiles/testC.dir/build.make CMakeFiles/testC.dir/c.c.o.provides.build
-.PHONY : CMakeFiles/testC.dir/c.c.o.provides
+CMakeFiles/testC.dir/main.c.o.provides: CMakeFiles/testC.dir/main.c.o.requires
+	$(MAKE) -f CMakeFiles/testC.dir/build.make CMakeFiles/testC.dir/main.c.o.provides.build
+.PHONY : CMakeFiles/testC.dir/main.c.o.provides
 
-CMakeFiles/testC.dir/c.c.o.provides.build: CMakeFiles/testC.dir/c.c.o
+CMakeFiles/testC.dir/main.c.o.provides.build: CMakeFiles/testC.dir/main.c.o
 
 
 # Object files for target testC
 testC_OBJECTS = \
-"CMakeFiles/testC.dir/c.c.o"
+"CMakeFiles/testC.dir/main.c.o"
 
 # External object files for target testC
 testC_EXTERNAL_OBJECTS =
 
-testC: CMakeFiles/testC.dir/c.c.o
+testC: CMakeFiles/testC.dir/main.c.o
 testC: CMakeFiles/testC.dir/build.make
 testC: CMakeFiles/testC.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cuongnb/CLionProjects/testC/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable testC"
@@ -99,7 +99,7 @@ CMakeFiles/testC.dir/build: testC
 
 .PHONY : CMakeFiles/testC.dir/build
 
-CMakeFiles/testC.dir/requires: CMakeFiles/testC.dir/c.c.o.requires
+CMakeFiles/testC.dir/requires: CMakeFiles/testC.dir/main.c.o.requires
 
 .PHONY : CMakeFiles/testC.dir/requires
 

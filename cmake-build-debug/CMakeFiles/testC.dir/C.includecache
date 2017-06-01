@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/cuongnb/CLionProjects/testC/c.c
+/home/cuongnb/CLionProjects/testC/main.c
 stdio.h
 -
 stdio.h

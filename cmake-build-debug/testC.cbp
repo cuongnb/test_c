@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/cuongnb/CLionProjects/testC/c.c">
+		<Unit filename="/home/cuongnb/CLionProjects/testC/main.c">
 			<Option target="testC"/>
 		</Unit>
 		<Unit filename="/home/cuongnb/CLionProjects/testC/CMakeLists.txt">

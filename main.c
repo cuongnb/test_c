@@ -21,7 +21,7 @@ typedef struct {
 void input_class(Class *aClass) {
 
     printf(" Nhap ten aClass: \n");
-    gets(&aClass->tenlop);
+    gets(aClass->tenlop);
     fflush(stdin);
     printf("\n Nhap sy so aClass: \n");
     int n;
@@ -31,17 +31,15 @@ void input_class(Class *aClass) {
     int i = 0;
     for (i = 0; i < aClass->n; i++) {
         printf("Nhap ma sv:\n");
-//        gets(aClass->dssv[i].masv);
         scanf("%s", aClass->dssv[i].masv);
         printf("\n Nhap ho ten: \n");
-//        gets(aClass->dssv[i].hoten);
         scanf("%s",aClass->dssv[i].hoten);
         printf("\n Nhap diem tb: \n");
         scanf("%f", &aClass->dssv[i].dtb);
     }
 }
 
-void non_decreasing_sort(Student member[], int n) {
+void decreasing_sort(Student member[], int n) {
     int i = 0, j = 0;
     Student temp;
     for (j = 1; j < n; j++) {
@@ -66,7 +64,7 @@ void show_menber(Student nember[], int n) {
 int main() {
     Class aClass;
     input_class(&aClass);
-    non_decreasing_sort(&aClass.dssv, aClass.n);
+    decreasing_sort(&aClass.dssv, aClass.n);
     show_menber(aClass.dssv, aClass.n);
     return 0;
 }
