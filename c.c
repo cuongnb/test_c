@@ -4,62 +4,69 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+#define MAX 80
 
 typedef struct {
     char masv[7];
     char hoten[32];
     float dtb;
-} Sinhvien;
+} Student;
 
 typedef struct {
-    Sinhvien dssv[80];
+    Student dssv[MAX];
     char tenlop[8];
     int n;
-} Lop;
+} Class;
 
-void nhap_dssv(Lop lop) {
-    printf("   Nhap ten lop: ");
-    gets(lop.tenlop);
+void input_class(Class *aClass) {
+
+    printf(" Nhap ten aClass: \n");
+    gets(&aClass->tenlop);
     fflush(stdin);
-    printf("\n Nhap sy so lop:");
-    scanf("%d",&lop.n);
+    printf("\n Nhap sy so aClass: \n");
+    int n;
+    scanf("%d", &n);
     fflush(stdin);
-//    for (int i = 0; i < lop->n; i++) {
-//        printf("NHap ma sv:");
-//        gets(lop->dssv[i].masv);
-//        fflush(stdin);
-//        printf("\n Nhap ho ten: ");
-//        gets(lop->dssv[i].hoten);
-//        fflush(stdin);
-//        printf("\n Nhap diem tb:");
-//        scanf("%f", &lop->dssv[i].dtb);
-//    }
+    aClass->n = n;
+    int i = 0;
+    for (i = 0; i < aClass->n; i++) {
+        printf("Nhap ma sv:\n");
+//        gets(aClass->dssv[i].masv);
+        scanf("%s", aClass->dssv[i].masv);
+        printf("\n Nhap ho ten: \n");
+//        gets(aClass->dssv[i].hoten);
+        scanf("%s",aClass->dssv[i].hoten);
+        printf("\n Nhap diem tb: \n");
+        scanf("%f", &aClass->dssv[i].dtb);
+    }
 }
 
-//void sapxep_dssv(Sinhvien ds[], int n) {
-//    for (int i = 0; i < n; i++) {
-//        for (int j = i + 1; j < n + 1; j++) {
-//            if (ds[i].dtb < ds[j].dtb) {
-//                Sinhvien temp = ds[i];
-//                ds[i] = ds[j];
-//                ds[j] = temp;
-//            }
-//        }
-//    }
-//}
+void non_decreasing_sort(Student member[], int n) {
+    int i = 0, j = 0;
+    Student temp;
+    for (j = 1; j < n; j++) {
+        temp = member[j];
+        i = j - 1;
+        while ((i >= 0) && (member[i].dtb < temp.dtb)) {
+            member[i + 1] = member[i];
+            i -= 1;
+        }
+        member[i + 1] = temp;
+    }
+}
 
-//void in_dssv(Sinhvien ds[], int n) {
-//    printf("%-20s %-30s %-7s\n", "MSV", "Ho ten", "DTB");
-//    for (int i = 0; i < n; i++) {
-//        printf("%d %-20s %-30s %-7.2f\n", i, ds[i].masv, ds[i].hoten, ds[i].dtb);
-//    }
-//}
+void show_menber(Student nember[], int n) {
+    printf("%-20s %-20s %-30s %-7s\n", "TT", "MSV", "Ho ten", "DTB");
+    int i = 0;
+    for (i = 0; i < n; i++) {
+        printf("%-20d %-20s %-30s %-7.2f\n", i, nember[i].masv, nember[i].hoten, nember[i].dtb);
+    }
+}
 
 int main() {
-    Lop lop;
-
-    nhap_dssv(lop);
-//    sapxep_dssv(lop->dssv, lop->n);
-//    in_dssv(lop->dssv, lop->n);
+    Class aClass;
+    input_class(&aClass);
+    non_decreasing_sort(&aClass.dssv, aClass.n);
+    show_menber(aClass.dssv, aClass.n);
     return 0;
 }

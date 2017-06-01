@@ -21,7 +21,11 @@ void nhap_dssv(Lop *lop) {
     gets(lop->tenlop);
     fflush(stdin);
     printf("\n Nhap sy so lop:");
-    gets(lop->n);
+    int xx;
+    scanf("%d", &xx);
+    lop->n = xx;
+//    printf(&lop->n);
+//    printf(lop->n);
     fflush(stdin);
 //    for (int i = 0; i < lop->n; i++) {
 //        printf("NHap ma sv:");
